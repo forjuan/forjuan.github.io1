@@ -4,27 +4,24 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>nodeJs搭建简单服务器 | forjuan</title>
+  <title>判断对象中是否有某个属性的多种方法 | forjuan</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="实现简单的例子：hello wordCreate a new server
-创建一个文件server.js 
-
-1234567891011 var http  = require(&quot;http&quot;);http.createServer(function(request,response)&amp;#123;  response.writeHead(200,&amp;#123;&quot;Content-Type&quot;:&quot;text/">
+  <meta name="description" content="序言 ：最近在看JavaScript权威指南，总结总结
+判断对象中是否有某个属性的多种方法1.使用in关键字此方法可以判断对象的自有属性，以及继承来的属性是否存在。1234var o = &amp;#123;x:1&amp;#125;;&quot;x&quot; in o;//true ，自有属性&quot;y&quot; in o;//false&quot;toString&quot; in o;//true,继承属性，继承自Object的都有
+2.使用对象的hasOw">
 <meta property="og:type" content="article">
-<meta property="og:title" content="nodeJs搭建简单服务器">
-<meta property="og:url" content="http://forjuan.github.io/2016/03/15/nodeJs搭建简单服务器/index.html">
+<meta property="og:title" content="判断对象中是否有某个属性的多种方法">
+<meta property="og:url" content="http://forjuan.github.io/2016/03/18/判断对象中是否有某个属性的多种方法/index.html">
 <meta property="og:site_name" content="forjuan">
-<meta property="og:description" content="实现简单的例子：hello wordCreate a new server
-创建一个文件server.js 
-
-1234567891011 var http  = require(&quot;http&quot;);http.createServer(function(request,response)&amp;#123;  response.writeHead(200,&amp;#123;&quot;Content-Type&quot;:&quot;text/">
-<meta property="og:updated_time" content="2016-03-15T01:20:21.196Z">
+<meta property="og:description" content="序言 ：最近在看JavaScript权威指南，总结总结
+判断对象中是否有某个属性的多种方法1.使用in关键字此方法可以判断对象的自有属性，以及继承来的属性是否存在。1234var o = &amp;#123;x:1&amp;#125;;&quot;x&quot; in o;//true ，自有属性&quot;y&quot; in o;//false&quot;toString&quot; in o;//true,继承属性，继承自Object的都有
+2.使用对象的hasOw">
+<meta property="og:updated_time" content="2016-03-18T12:43:59.822Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="nodeJs搭建简单服务器">
-<meta name="twitter:description" content="实现简单的例子：hello wordCreate a new server
-创建一个文件server.js 
-
-1234567891011 var http  = require(&quot;http&quot;);http.createServer(function(request,response)&amp;#123;  response.writeHead(200,&amp;#123;&quot;Content-Type&quot;:&quot;text/">
+<meta name="twitter:title" content="判断对象中是否有某个属性的多种方法">
+<meta name="twitter:description" content="序言 ：最近在看JavaScript权威指南，总结总结
+判断对象中是否有某个属性的多种方法1.使用in关键字此方法可以判断对象的自有属性，以及继承来的属性是否存在。1234var o = &amp;#123;x:1&amp;#125;;&quot;x&quot; in o;//true ，自有属性&quot;y&quot; in o;//false&quot;toString&quot; in o;//true,继承属性，继承自Object的都有
+2.使用对象的hasOw">
   
   
     <link rel="icon" href="/img/favicon.png">
@@ -179,11 +176,11 @@
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-nodeJs搭建简单服务器" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-判断对象中是否有某个属性的多种方法" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/03/15/nodeJs搭建简单服务器/" class="article-date">
-  	<time datetime="2016-03-15T01:01:10.000Z" itemprop="datePublished">2016-03-15</time>
+      <a href="/2016/03/18/判断对象中是否有某个属性的多种方法/" class="article-date">
+  	<time datetime="2016-03-18T12:24:48.000Z" itemprop="datePublished">2016-03-18</time>
 </a>
     </div>
   
@@ -196,7 +193,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      nodeJs搭建简单服务器
+      判断对象中是否有某个属性的多种方法
     </h1>
   
 
@@ -212,11 +209,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="实现简单的例子：hello-word"><a href="#实现简单的例子：hello-word" class="headerlink" title="实现简单的例子：hello word"></a>实现简单的例子：hello word</h2><h3 id="Create-a-new-server"><a href="#Create-a-new-server" class="headerlink" title="Create a new server"></a>Create a new server</h3><blockquote>
-<p>创建一个文件server.js </p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"> var http  = require(<span class="string">"http"</span>);</span><br><span class="line"></span><br><span class="line">http.createServer(<span class="keyword">function</span>(request,response)&#123;</span><br><span class="line"></span><br><span class="line">  response.writeHead(200,&#123;<span class="string">"Content-Type"</span>:<span class="string">"text/plain"</span>&#125;);</span><br><span class="line"></span><br><span class="line">  response.write(<span class="string">"Hello World"</span>);</span><br><span class="line"></span><br><span class="line">  response.end();</span><br><span class="line"></span><br><span class="line">&#125;).listen(8888);</span><br></pre></td></tr></table></figure>
-<h3 id="接着打开cmd，进入到文件夹"><a href="#接着打开cmd，进入到文件夹" class="headerlink" title="接着打开cmd，进入到文件夹"></a>接着打开cmd，进入到文件夹</h3><h3 id="执行文件，启动服务器"><a href="#执行文件，启动服务器" class="headerlink" title="执行文件，启动服务器"></a>执行文件，启动服务器</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node server.js</span><br></pre></td></tr></table></figure>
+        <p>序言 ：最近在看JavaScript权威指南，总结总结</p>
+<h2 id="判断对象中是否有某个属性的多种方法"><a href="#判断对象中是否有某个属性的多种方法" class="headerlink" title="判断对象中是否有某个属性的多种方法"></a>判断对象中是否有某个属性的多种方法</h2><h3 id="1-使用in关键字"><a href="#1-使用in关键字" class="headerlink" title="1.使用in关键字"></a>1.使用in关键字</h3><p>此方法可以判断对象的自有属性，以及继承来的属性是否存在。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var o = &#123;x:1&#125;;</span><br><span class="line"><span class="string">"x"</span> <span class="keyword">in</span> o;//<span class="literal">true</span> ，自有属性</span><br><span class="line"><span class="string">"y"</span> <span class="keyword">in</span> o;//<span class="literal">false</span></span><br><span class="line"><span class="string">"toString"</span> <span class="keyword">in</span> o;//<span class="literal">true</span>,继承属性，继承自Object的都有</span><br></pre></td></tr></table></figure></p>
+<h3 id="2-使用对象的hasOwnProperty-方法"><a href="#2-使用对象的hasOwnProperty-方法" class="headerlink" title="2.使用对象的hasOwnProperty()方法"></a>2.使用对象的hasOwnProperty()方法</h3><p>该方法只能判断自有属性是否存在，对于继承属性会返回false</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var 0 = &#123;x:1&#125;;</span><br><span class="line">o.hasOwnProperty(<span class="string">"x"</span>);//<span class="literal">true</span>;自有属性</span><br><span class="line">o.hasOwnProperty(<span class="string">"y"</span>);//<span class="literal">false</span>;自有属性中不存在</span><br><span class="line">o.hasOwnProperty(<span class="string">"toString"</span>);//<span class="literal">false</span>,这是一个继承属性</span><br></pre></td></tr></table></figure>
+<h3 id="3-使用undefined判断（网上搜索找到的）"><a href="#3-使用undefined判断（网上搜索找到的）" class="headerlink" title="3.使用undefined判断（网上搜索找到的）"></a>3.使用undefined判断（网上搜索找到的）</h3><p>自由属性和继承属性均可判断<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var o = &#123;x:1&#125;;</span><br><span class="line">o.x !== undefined;//<span class="literal">true</span>;要用全等哦，值和类型都要相同</span><br><span class="line">o.y !== undefined;//<span class="literal">false</span>;</span><br><span class="line">o.toString !== undefined//<span class="literal">true</span></span><br></pre></td></tr></table></figure></p>
+<p>注意：若对象有一个值为undefined的话，无法检测</p>
+<h3 id="4-在条件语句中直接判断"><a href="#4-在条件语句中直接判断" class="headerlink" title="4.在条件语句中直接判断"></a>4.在条件语句中直接判断</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var o = &#123;&#125;;</span><br><span class="line"><span class="keyword">if</span>(o.x)</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -226,18 +225,9 @@
     
 <nav id="article-nav">
   
-    <a href="/2016/03/18/判断对象中是否有某个属性的多种方法/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          判断对象中是否有某个属性的多种方法
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/03/14/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World</div>
+    <a href="/2016/03/15/nodeJs搭建简单服务器/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">nodeJs搭建简单服务器</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -272,7 +262,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="nodeJs搭建简单服务器" data-title="nodeJs搭建简单服务器" data-url="http://forjuan.github.io/2016/03/15/nodeJs搭建简单服务器/"></div>
+	<div class="ds-thread" data-thread-key="判断对象中是否有某个属性的多种方法" data-title="判断对象中是否有某个属性的多种方法" data-url="http://forjuan.github.io/2016/03/18/判断对象中是否有某个属性的多种方法/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

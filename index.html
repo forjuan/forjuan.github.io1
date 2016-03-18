@@ -68,7 +68,7 @@
 						<li>Tags</li>
 						
 						
-						<li>Über</li>
+						<li>About</li>
 						
 					</ul>
 				</div>
@@ -170,6 +170,65 @@
 </nav>
 
       <div class="body-wrap">
+  
+    <article id="post-判断对象中是否有某个属性的多种方法" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/03/18/判断对象中是否有某个属性的多种方法/" class="article-date">
+  	<time datetime="2016-03-18T12:24:48.000Z" itemprop="datePublished">2016-03-18</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/18/判断对象中是否有某个属性的多种方法/">判断对象中是否有某个属性的多种方法</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>序言 ：最近在看JavaScript权威指南，总结总结</p>
+<h2 id="判断对象中是否有某个属性的多种方法"><a href="#判断对象中是否有某个属性的多种方法" class="headerlink" title="判断对象中是否有某个属性的多种方法"></a>判断对象中是否有某个属性的多种方法</h2><h3 id="1-使用in关键字"><a href="#1-使用in关键字" class="headerlink" title="1.使用in关键字"></a>1.使用in关键字</h3><p>此方法可以判断对象的自有属性，以及继承来的属性是否存在。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var o = &#123;x:1&#125;;</span><br><span class="line"><span class="string">"x"</span> <span class="keyword">in</span> o;//<span class="literal">true</span> ，自有属性</span><br><span class="line"><span class="string">"y"</span> <span class="keyword">in</span> o;//<span class="literal">false</span></span><br><span class="line"><span class="string">"toString"</span> <span class="keyword">in</span> o;//<span class="literal">true</span>,继承属性，继承自Object的都有</span><br></pre></td></tr></table></figure></p>
+<h3 id="2-使用对象的hasOwnProperty-方法"><a href="#2-使用对象的hasOwnProperty-方法" class="headerlink" title="2.使用对象的hasOwnProperty()方法"></a>2.使用对象的hasOwnProperty()方法</h3><p>该方法只能判断自有属性是否存在，对于继承属性会返回false</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var 0 = &#123;x:1&#125;;</span><br><span class="line">o.hasOwnProperty(<span class="string">"x"</span>);//<span class="literal">true</span>;自有属性</span><br><span class="line">o.hasOwnProperty(<span class="string">"y"</span>);//<span class="literal">false</span>;自有属性中不存在</span><br><span class="line">o.hasOwnProperty(<span class="string">"toString"</span>);//<span class="literal">false</span>,这是一个继承属性</span><br></pre></td></tr></table></figure>
+<h3 id="3-使用undefined判断（网上搜索找到的）"><a href="#3-使用undefined判断（网上搜索找到的）" class="headerlink" title="3.使用undefined判断（网上搜索找到的）"></a>3.使用undefined判断（网上搜索找到的）</h3><p>自由属性和继承属性均可判断<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var o = &#123;x:1&#125;;</span><br><span class="line">o.x !== undefined;//<span class="literal">true</span>;要用全等哦，值和类型都要相同</span><br><span class="line">o.y !== undefined;//<span class="literal">false</span>;</span><br><span class="line">o.toString !== undefined//<span class="literal">true</span></span><br></pre></td></tr></table></figure></p>
+<p>注意：若对象有一个值为undefined的话，无法检测</p>
+<h3 id="4-在条件语句中直接判断"><a href="#4-在条件语句中直接判断" class="headerlink" title="4.在条件语句中直接判断"></a>4.在条件语句中直接判断</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var o = &#123;&#125;;</span><br><span class="line"><span class="keyword">if</span>(o.x)</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-nodeJs搭建简单服务器" class="article article-type-post" itemscope itemprop="blogPost">
   
