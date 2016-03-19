@@ -16,7 +16,7 @@
 <meta property="og:description" content="序言 ：最近在看JavaScript权威指南，总结总结
 判断对象中是否有某个属性的多种方法1.使用in关键字此方法可以判断对象的自有属性，以及继承来的属性是否存在。1234var o = &amp;#123;x:1&amp;#125;;&quot;x&quot; in o;//true ，自有属性&quot;y&quot; in o;//false&quot;toString&quot; in o;//true,继承属性，继承自Object的都有
 2.使用对象的hasOw">
-<meta property="og:updated_time" content="2016-03-18T12:43:59.822Z">
+<meta property="og:updated_time" content="2016-03-19T03:11:35.114Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="判断对象中是否有某个属性的多种方法">
 <meta name="twitter:description" content="序言 ：最近在看JavaScript权威指南，总结总结
@@ -75,7 +75,7 @@
 						<li>Tags</li>
 						
 						
-						<li>About</li>
+						<li>Über</li>
 						
 					</ul>
 				</div>
@@ -216,6 +216,8 @@
 <h3 id="3-使用undefined判断（网上搜索找到的）"><a href="#3-使用undefined判断（网上搜索找到的）" class="headerlink" title="3.使用undefined判断（网上搜索找到的）"></a>3.使用undefined判断（网上搜索找到的）</h3><p>自由属性和继承属性均可判断<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var o = &#123;x:1&#125;;</span><br><span class="line">o.x !== undefined;//<span class="literal">true</span>;要用全等哦，值和类型都要相同</span><br><span class="line">o.y !== undefined;//<span class="literal">false</span>;</span><br><span class="line">o.toString !== undefined//<span class="literal">true</span></span><br></pre></td></tr></table></figure></p>
 <p>注意：若对象有一个值为undefined的话，无法检测</p>
 <h3 id="4-在条件语句中直接判断"><a href="#4-在条件语句中直接判断" class="headerlink" title="4.在条件语句中直接判断"></a>4.在条件语句中直接判断</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var o = &#123;&#125;;</span><br><span class="line"><span class="keyword">if</span>(o.x)</span><br></pre></td></tr></table></figure>
+<h3 id="5-propertyIsEnumerable方法检测"><a href="#5-propertyIsEnumerable方法检测" class="headerlink" title="5.propertyIsEnumerable方法检测"></a>5.propertyIsEnumerable方法检测</h3><p>该函数是hasOwnProperty()的增强版，只有检测到自由属性且该属性可枚举性为true时才返回true.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var o = &#123;x:1,y:2&#125;;</span><br><span class="line">o.propertyIsEnumerable(<span class="string">"x"</span>);//<span class="literal">true</span>，可枚举的自有属性</span><br><span class="line">o.propertyIsEnumerable(<span class="string">"toString"</span>);//<span class="literal">false</span>,toString属性不可枚举</span><br><span class="line">o.propertyIsEnumerable(<span class="string">"j"</span>);//<span class="literal">false</span> ,没有该属性</span><br></pre></td></tr></table></figure>
 
       
     </div>
