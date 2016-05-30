@@ -4,42 +4,18 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>优先级 | forjuan</title>
+  <title>sass入门学习笔记 | forjuan</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="如何计算优先级？  优先级是根据由每种选择器类型构成的级联字串计算而成的。他是一个对应匹配表达式的权重。  若优先级相同，靠后的css会应用到元素上。
-优先级顺序下面试一份优先级逐级增加的选择器列表
-通用选择器（*）
-元素(类型)选择器
-类选择器
-属性选择器
-伪类
-ID 选择器
-内联样式!important 规则除外 当 !important 规则被应用在一个样式声明中时,该样式声明会覆盖CSS中">
+  <meta name="description" content="首先对sass有个整体认识  Sass (Syntactically Awesome Stylesheets) is a scripting language that is interpreted into Cascading Style Sheets (CSS).Sass consists of two syntaxes. The original syntax, called “the in">
 <meta property="og:type" content="article">
-<meta property="og:title" content="优先级">
-<meta property="og:url" content="http://forjuan.github.io/2016/04/05/优先级/index.html">
+<meta property="og:title" content="sass入门学习笔记">
+<meta property="og:url" content="http://forjuan.github.io/2016/05/30/sass入门学习笔记/index.html">
 <meta property="og:site_name" content="forjuan">
-<meta property="og:description" content="如何计算优先级？  优先级是根据由每种选择器类型构成的级联字串计算而成的。他是一个对应匹配表达式的权重。  若优先级相同，靠后的css会应用到元素上。
-优先级顺序下面试一份优先级逐级增加的选择器列表
-通用选择器（*）
-元素(类型)选择器
-类选择器
-属性选择器
-伪类
-ID 选择器
-内联样式!important 规则除外 当 !important 规则被应用在一个样式声明中时,该样式声明会覆盖CSS中">
-<meta property="og:updated_time" content="2016-04-05T13:08:26.642Z">
+<meta property="og:description" content="首先对sass有个整体认识  Sass (Syntactically Awesome Stylesheets) is a scripting language that is interpreted into Cascading Style Sheets (CSS).Sass consists of two syntaxes. The original syntax, called “the in">
+<meta property="og:updated_time" content="2016-05-30T12:33:38.689Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="优先级">
-<meta name="twitter:description" content="如何计算优先级？  优先级是根据由每种选择器类型构成的级联字串计算而成的。他是一个对应匹配表达式的权重。  若优先级相同，靠后的css会应用到元素上。
-优先级顺序下面试一份优先级逐级增加的选择器列表
-通用选择器（*）
-元素(类型)选择器
-类选择器
-属性选择器
-伪类
-ID 选择器
-内联样式!important 规则除外 当 !important 规则被应用在一个样式声明中时,该样式声明会覆盖CSS中">
+<meta name="twitter:title" content="sass入门学习笔记">
+<meta name="twitter:description" content="首先对sass有个整体认识  Sass (Syntactically Awesome Stylesheets) is a scripting language that is interpreted into Cascading Style Sheets (CSS).Sass consists of two syntaxes. The original syntax, called “the in">
   
   
     <link rel="icon" href="/img/favicon.png">
@@ -194,11 +170,11 @@ ID 选择器
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-优先级" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-sass入门学习笔记" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/04/05/优先级/" class="article-date">
-  	<time datetime="2016-04-05T12:43:32.000Z" itemprop="datePublished">2016-04-05</time>
+      <a href="/2016/05/30/sass入门学习笔记/" class="article-date">
+  	<time datetime="2016-05-30T11:54:38.000Z" itemprop="datePublished">2016-05-30</time>
 </a>
     </div>
   
@@ -211,7 +187,7 @@ ID 选择器
         
   
     <h1 class="article-title" itemprop="name">
-      优先级
+      sass入门学习笔记
     </h1>
   
 
@@ -227,18 +203,8 @@ ID 选择器
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="如何计算优先级？"><a href="#如何计算优先级？" class="headerlink" title="如何计算优先级？"></a>如何计算优先级？</h1><p>  优先级是根据由每种选择器类型构成的级联字串计算而成的。他是一个对应匹配表达式的权重。<br>  若优先级相同，靠后的css会应用到元素上。</p>
-<h1 id="优先级顺序"><a href="#优先级顺序" class="headerlink" title="优先级顺序"></a>优先级顺序</h1><h2 id="下面试一份优先级逐级增加的选择器列表"><a href="#下面试一份优先级逐级增加的选择器列表" class="headerlink" title="下面试一份优先级逐级增加的选择器列表"></a>下面试一份优先级逐级增加的选择器列表</h2><ul>
-<li>通用选择器（*）</li>
-<li>元素(类型)选择器</li>
-<li>类选择器</li>
-<li>属性选择器</li>
-<li>伪类</li>
-<li>ID 选择器</li>
-<li>内联样式<h2 id="important-规则除外"><a href="#important-规则除外" class="headerlink" title="!important 规则除外"></a>!important 规则除外</h2> 当 !important 规则被应用在一个样式声明中时,该样式声明会覆盖CSS中任何其他的声明, 无论它处在声明列表中的哪里. 尽管如此, !important规则还是与优先级毫无关系.使用 !important 不是一个好习惯，因为它改变了你样式表本来的级联规则，从而使其难以调试。</li>
-</ul>
-<p>详情请戳<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Specificity#如何计算优先级？" target="_blank" rel="external">https://developer.mozilla.org/zh-CN/docs/Web/CSS/Specificity#如何计算优先级？</a></p>
-<p>具体计算细节请看选择器的特性<a href="https://www.w3.org/TR/selectors/#specificity" target="_blank" rel="external">https://www.w3.org/TR/selectors/#specificity</a></p>
+        <h2 id="首先对sass有个整体认识"><a href="#首先对sass有个整体认识" class="headerlink" title="首先对sass有个整体认识"></a>首先对sass有个整体认识</h2><p>  Sass (Syntactically Awesome Stylesheets) is a scripting language that is interpreted into Cascading Style Sheets (CSS).Sass consists of two syntaxes. The original syntax, called “the indented syntax”, uses a syntax similar to Haml.[4] It uses indentation to separate code blocks and newline characters to separate rules. The newer syntax, “SCSS”, uses block formatting like that of CSS. It uses braces to denote code blocks and semicolons to separate lines within a block. The indented syntax and SCSS files are traditionally given the extensions .sass and .scss, respectively.——from wikipedia<br>  译文：sass 是一种被编译为级联样式表（css）的脚本语言。sass有包括语法，最开始的语法叫<em>缩进语法</em>，这种语法很像Haml(<a href="https://en.wikipedia.org/wiki/Haml),它的分离规则是使用缩进来分离代码块和换行符。另一种新的语法是*SCSS*，使用块格式化如css，它使用括号来表示代码块，用分号来区分不同的行块。缩进语法和SCSS的文件一般分别以.sass和.scss做为扩展名。" target="_blank" rel="external">https://en.wikipedia.org/wiki/Haml),它的分离规则是使用缩进来分离代码块和换行符。另一种新的语法是*SCSS*，使用块格式化如css，它使用括号来表示代码块，用分号来区分不同的行块。缩进语法和SCSS的文件一般分别以.sass和.scss做为扩展名。</a></p>
+<p>  这里有篇文章具体讲.sass和.scss为扩展名的文件的不同之处，What’s the Difference Between Sass and SCSS?(<a href="https://www.sitepoint.com/whats-difference-sass-scss/" target="_blank" rel="external">https://www.sitepoint.com/whats-difference-sass-scss/</a>).</p>
 
       
     </div>
@@ -248,18 +214,9 @@ ID 选择器
     
 <nav id="article-nav">
   
-    <a href="/2016/05/07/参加360前端星计划总结（一）-前端工程师/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          参加360前端星计划总结（一）--前端工程师
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/03/18/判断对象中是否有某个属性的多种方法/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">判断对象中是否有某个属性的多种方法</div>
+    <a href="/2016/05/09/参加360前端星计划总结（二）-HTML&CSS/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">参加360前端星计划总结（二）--HTML&amp;CSS</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -294,7 +251,7 @@ ID 选择器
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="优先级" data-title="优先级" data-url="http://forjuan.github.io/2016/04/05/优先级/"></div>
+	<div class="ds-thread" data-thread-key="sass入门学习笔记" data-title="sass入门学习笔记" data-url="http://forjuan.github.io/2016/05/30/sass入门学习笔记/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
