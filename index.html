@@ -68,7 +68,7 @@
 						<li>Tags</li>
 						
 						
-						<li>Über</li>
+						<li>About</li>
 						
 					</ul>
 				</div>
@@ -199,6 +199,22 @@
       
         <h2 id="首先对sass有个整体认识"><a href="#首先对sass有个整体认识" class="headerlink" title="首先对sass有个整体认识"></a>首先对sass有个整体认识</h2><p>  Sass (Syntactically Awesome Stylesheets) is a scripting language that is interpreted into Cascading Style Sheets (CSS).Sass consists of two syntaxes. The original syntax, called “the indented syntax”, uses a syntax similar to Haml.[4] It uses indentation to separate code blocks and newline characters to separate rules. The newer syntax, “SCSS”, uses block formatting like that of CSS. It uses braces to denote code blocks and semicolons to separate lines within a block. The indented syntax and SCSS files are traditionally given the extensions .sass and .scss, respectively.——from wikipedia<br>  译文：sass 是一种被编译为级联样式表（css）的脚本语言。sass有包括语法，最开始的语法叫<em>缩进语法</em>，这种语法很像<a href="https://en.wikipedia.org/wiki/Haml" target="_blank" rel="external">Haml</a>,它的分离规则是使用缩进来分离代码块和换行符。另一种新的语法是<em>SCSS</em>，使用块格式化如css，它使用括号来表示代码块，用分号来区分不同的行块。缩进语法和SCSS的文件一般分别以.sass和.scss做为扩展名。</p>
 <p>  这里有篇文章具体讲.sass和.scss为扩展名的文件的不同之处，<a href="https://www.sitepoint.com/whats-difference-sass-scss/" target="_blank" rel="external">What’s the Difference Between Sass and SCSS?</a>.</p>
+<h2 id="install-sass"><a href="#install-sass" class="headerlink" title="install sass"></a>install sass</h2><p>   官网上有两种下载方式，一种是利用applications来执行sass文件，有付费和免费的。另一种方式通过命令行来安装，</p>
+<ul>
+<li><p>Linux,先通过包管理器安装Ruby，如rbenv 或者是rvm,再在命令行输入</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo su -c <span class="string">"gem install sass"</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Windows/Mac，因为Mac系统本身自带Ruby,不用再安装,Windows需要先安装Ruby(<a href="http://rubyinstaller.org/" target="_blank" rel="external">Ruby Installer</a>),安装好后用Ruby的命令行,输入以下命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gem install sass</span><br></pre></td></tr></table></figure>
+<p>如果出现错误信息如：你需要使用sudo命令来安装sass gem 在命令行输入：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gem install sass</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>检查安装是否成功</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sass -v</span><br></pre></td></tr></table></figure>
+<p>回车之后，如果命令行显示Sass 3.4.22（Selective Steve）,就安装好了。</p>
+</li>
+</ul>
+<p>[接下来学习sass语法]</p>
 
       
     </div>
