@@ -68,7 +68,7 @@
 						<li>Tags</li>
 						
 						
-						<li>About</li>
+						<li>Über</li>
 						
 					</ul>
 				</div>
@@ -202,7 +202,12 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sass input.scss output.css</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>若是后缀名是.sass</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sass input.sass output.css</span><br><span class="line">``` bash </span><br><span class="line">注意：文件名也可以有相对路径，如sass public/stylesheet/input.scss public/stylesheet/output.css</span><br><span class="line">3. 你也可以监测sass文件，当sass文件改变后，能自动更新css文件，使用如下命令</span><br><span class="line">``` bash</span><br><span class="line">sass --watch input.scss:output.css</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sass input.sass output.css</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>注意：文件名也可以有相对路径，如<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sass public/stylesheet/input.scss public/stylesheet/output.css</span><br></pre></td></tr></table></figure></p>
+<ol>
+<li>你也可以监测sass文件，当sass文件改变后，能自动更新css文件，使用如下命令<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sass --watch input.scss:output.css</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <p>注意：可能出现如下错误，说编码的问题，我遇到的问题如下</p>
