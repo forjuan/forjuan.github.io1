@@ -207,19 +207,17 @@
 </ol>
 <p>注意：文件名也可以有相对路径，如<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sass public/stylesheet/input.scss public/stylesheet/output.css</span><br></pre></td></tr></table></figure></p>
 <ol>
-<li>你也可以监测sass文件，当sass文件改变后，能自动更新css文件，使用如下命令<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sass --watch input.scss:output.css</span><br></pre></td></tr></table></figure>
+<li><p>你也可以监测sass文件，当sass文件改变后，能自动更新css文件，使用如下命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sass --watch input.scss:output.css</span><br></pre></td></tr></table></figure>
+<p> 注意：可能出现如下错误，说编码的问题，我遇到的问题如下</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>sass is watching for changes.Press Ctrl-c to stop.<br> Ecoding:：CompatibilityError:incompatible character encoding: GBK and UTF-8 Use –trace for backtrace.<br> 错误原因：路径名有中文字符，解决方法是更给路径为英文字符后就可以了。</p>
+</blockquote>
+</blockquote>
+</blockquote>
 </li>
-</ol>
-<p>注意：可能出现如下错误，说编码的问题，我遇到的问题如下</p>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>sass is watching for changes.Press Ctrl-c to stop.<br>Ecoding:：CompatibilityError:incompatible character encoding: GBK and UTF-8 Use –trace for backtrace.</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<p>错误原因：路径名有中文字符，解决方法是更给路径为英文字符后就可以了。</p>
-<ol>
 <li>如果某个文件有多个sass文件，可以检测整个目录<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sass --watch app/sass:public/stylesheets</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
