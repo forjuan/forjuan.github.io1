@@ -171,6 +171,92 @@
 
       <div class="body-wrap">
   
+    <article id="post-sass入门学习笔记-SassScript" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/06/01/sass入门学习笔记-SassScript/" class="article-date">
+  	<time datetime="2016-06-01T07:03:06.000Z" itemprop="datePublished">2016-06-01</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/06/01/sass入门学习笔记-SassScript/">sass入门学习笔记-SassScript</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="SassScript是什么"><a href="#SassScript是什么" class="headerlink" title="SassScript是什么"></a>SassScript是什么</h2><p>   In addition to the plain CSS property syntax, Sass supports a small set of extensions called SassScript. SassScript allows properties to use variables, arithmetic, and extra functions. SassScript can be used in any property value.—来自官方文档<br>   译文: 除了纯css语法，sass还有少量的叫SassScript的扩展。在SassScript中属性可以使用变量，<br>   算法，和其他方法。SassScript可用于任何属性值。</p>
+<h2 id="使用Interactive-Shell"><a href="#使用Interactive-Shell" class="headerlink" title="使用Interactive Shell"></a>使用Interactive Shell</h2><ul>
+<li><p>使用sass命令行输入如下命令来使用Interactive Shell,</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sass -i</span><br></pre></td></tr></table></figure>
+<p>接着进入Interactive Shell，会显示三个大于符号>>>,接着输入SassScript表达式 可以理解得到结果，如：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">\&gt;\&gt;\&gt; 1px +3px + 4px</span><br><span class="line">       8px</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="变量声明用"><a href="#变量声明用" class="headerlink" title="变量声明用$"></a>变量声明用$</h3><ul>
+<li><p>在sassscript使用变量时，都是以$开始，设置值时像css属性一样设置，如：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$width</span>:40px;</span><br><span class="line"><span class="comment">#main&#123;</span></span><br><span class="line">   width:<span class="variable">$width</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>变量只能在它被定义的时候嵌套的选择器层才能使用（类似作用域），如果在任何嵌套选择器外面，就是全局都可以使用，同样使用！global 标志，也可以让变量在全局范围使用。如:<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">#main&#123;</span></span><br><span class="line">  <span class="variable">$width</span>:40px !global;</span><br><span class="line">  width:<span class="variable">$width</span>;</span><br><span class="line"> &#125;</span><br><span class="line"> </span><br><span class="line"><span class="comment">#sidebar &#123;</span></span><br><span class="line"> width:<span class="variable">$width</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>注意：由于历史原因，变量的下划线和连字符可以互换。</p>
+<h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><ul>
+<li>SassScript有7种主要的类型</li>
+</ul>
+<ol>
+<li>numbers(如：1.2,12,12px)</li>
+<li>strings of text,有没有引号都可以（如：”foo”,’far’,baz）</li>
+<li>colors(如：blue,#044534,rgba(255,255,0,0.5))</li>
+<li>booleans(如:true,false)</li>
+<li>nulls(如：null)</li>
+<li>lists of values,用空格或逗号分隔(如：1.5em 1em 0.3em,Helvetica,Arial,sans-serif)</li>
+<li>maps from one to another(如：（key1:value1,key2:value2）)<h4 id="lists-一系列值得组合，用逗号或分号隔开，在SassScript中有一些list-function"><a href="#lists-一系列值得组合，用逗号或分号隔开，在SassScript中有一些list-function" class="headerlink" title="lists,一系列值得组合，用逗号或分号隔开，在SassScript中有一些list function"></a>lists,一系列值得组合，用逗号或分号隔开，在SassScript中有一些list function</h4></li>
+</ol>
+</li>
+<li>nth，可以访问在lists中的第几个项目，<a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#nth-instance_method" target="_blank" rel="external">nth function</a></li>
+<li>join ,将多个lists合并，<a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#join-instance_method" target="_blank" rel="external">join function</a></li>
+<li>append,添加项目到list中，<a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#append-instance_method" target="_blank" rel="external">append function</a></li>
+<li>each,为每个项目添加样式，<a href="http://sass-lang.com/documentation/file.SASS_REFERENCE.html#each-directive" target="_blank" rel="external">each functin</a></li>
+</ul>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-sass入门-使用sass" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
