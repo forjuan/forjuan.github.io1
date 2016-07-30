@@ -171,6 +171,67 @@
 
       <div class="body-wrap">
   
+    <article id="post-bootstrap学习-1-变量" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/07/30/bootstrap学习-1-变量/" class="article-date">
+  	<time datetime="2016-07-30T07:20:48.000Z" itemprop="datePublished">2016-07-30</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/07/30/bootstrap学习-1-变量/">bootstrap学习(1)--变量</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="变量写在哪里"><a href="#变量写在哪里" class="headerlink" title="变量写在哪里"></a>变量写在哪里</h1><p>变量统一全部写在一个文件中，方便查询、修改。</p>
+<h1 id="变量分类"><a href="#变量分类" class="headerlink" title="变量分类"></a>变量分类</h1><ol>
+<li>colors类里，定义最基础的两大类颜色，一种是没有交互效果时的默认状态color,但有不同级别的灰度。另一种是有交互效果的，如success,info,warining,danger。</li>
+<li>Scaffolding  设置一些全局样式，如背景颜色，text-color，link-color,link-hover-color。（跟整体页面风格相关）</li>
+<li>Typography（排版印刷），小女子认为就是跟字体显示相关的内容。font,line-height,color,body text, headings 等。  在设置字体的时候，有font-size-base：（14px）基础字体大小，和大中小字体，<strong>line-height是个与字体仅仅相关的属性，所以让line-height以font-size-base为基础，将line-height设置为默认是它1.428倍,可以让字体显示时有一定的上下距离</strong>，看起来更加舒服。<strong>相关知识补充</strong>字体系列:serif(衬线体）,sans-serif（无衬线字体）,衬线体 就是字画结束后 会有多余的点缀，且字画的粗细不同，非衬线体相反。还有其他三种通用系列。详情点击 通用字体系列<a href="http://www.w3school.com.cn/css/css_font-family.asp" title="css字体系列" target="_blank" rel="external">css字体系列</a>。</li>
+</ol>
+<ol>
+<li>最后按组件分类，在组件中也尽量使用上面的基础样式变量。例如常用的导航条，它的变量写法<img src="http://i.imgur.com/lcJeQbI.png" alt=""><br> 能调用基础的变量 就调用，如<code>@navbar-default-link-active-bg:            darken(@navbar-default-bg, 6.5%);</code>有自己不一样的样式才单独写。因为不是大众基础，所以没必要设为最通用的变量。</li>
+</ol>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-sass入门学习笔记-SassScript" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -698,67 +759,6 @@
 </blockquote>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"> var http  = require(<span class="string">"http"</span>);</span><br><span class="line"></span><br><span class="line">http.createServer(<span class="keyword">function</span>(request,response)&#123;</span><br><span class="line"></span><br><span class="line">  response.writeHead(200,&#123;<span class="string">"Content-Type"</span>:<span class="string">"text/plain"</span>&#125;);</span><br><span class="line"></span><br><span class="line">  response.write(<span class="string">"Hello World"</span>);</span><br><span class="line"></span><br><span class="line">  response.end();</span><br><span class="line"></span><br><span class="line">&#125;).listen(8888);</span><br></pre></td></tr></table></figure>
 <h3 id="接着打开cmd，进入到文件夹"><a href="#接着打开cmd，进入到文件夹" class="headerlink" title="接着打开cmd，进入到文件夹"></a>接着打开cmd，进入到文件夹</h3><h3 id="执行文件，启动服务器"><a href="#执行文件，启动服务器" class="headerlink" title="执行文件，启动服务器"></a>执行文件，启动服务器</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node server.js</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/03/14/hello-world/" class="article-date">
-  	<time datetime="2016-03-14T08:53:14.457Z" itemprop="datePublished">2016-03-14</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/03/14/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
 
       
     </div>
