@@ -4,42 +4,29 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>优先级 | forjuan</title>
+  <title>bootstrap学习(1)--变量 | forjuan</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="如何计算优先级？  优先级是根据由每种选择器类型构成的级联字串计算而成的。他是一个对应匹配表达式的权重。  若优先级相同，靠后的css会应用到元素上。
-优先级顺序下面试一份优先级逐级增加的选择器列表
-通用选择器（*）
-元素(类型)选择器
-类选择器
-属性选择器
-伪类
-ID 选择器
-内联样式!important 规则除外 当 !important 规则被应用在一个样式声明中时,该样式声明会覆盖CSS中">
+  <meta name="description" content="变量写在哪里变量统一全部写在一个文件中，方便查询、修改。
+变量分类
+colors类里，定义最基础的两大类颜色，一种是没有交互效果时的默认状态color,但有不同级别的灰度。另一种是有交互效果的，如success,info,warining,danger。
+Scaffolding  设置一些全局样式，如背景颜色，text-color，link-color,link-hover-color。（跟整体页">
 <meta property="og:type" content="article">
-<meta property="og:title" content="优先级">
-<meta property="og:url" content="http://forjuan.github.io/2016/04/05/优先级/index.html">
+<meta property="og:title" content="bootstrap学习(1)--变量">
+<meta property="og:url" content="http://forjuan.github.io/2016/07/30/bootstrap学习-1-less变量/index.html">
 <meta property="og:site_name" content="forjuan">
-<meta property="og:description" content="如何计算优先级？  优先级是根据由每种选择器类型构成的级联字串计算而成的。他是一个对应匹配表达式的权重。  若优先级相同，靠后的css会应用到元素上。
-优先级顺序下面试一份优先级逐级增加的选择器列表
-通用选择器（*）
-元素(类型)选择器
-类选择器
-属性选择器
-伪类
-ID 选择器
-内联样式!important 规则除外 当 !important 规则被应用在一个样式声明中时,该样式声明会覆盖CSS中">
-<meta property="og:updated_time" content="2016-04-05T13:08:26.642Z">
+<meta property="og:description" content="变量写在哪里变量统一全部写在一个文件中，方便查询、修改。
+变量分类
+colors类里，定义最基础的两大类颜色，一种是没有交互效果时的默认状态color,但有不同级别的灰度。另一种是有交互效果的，如success,info,warining,danger。
+Scaffolding  设置一些全局样式，如背景颜色，text-color，link-color,link-hover-color。（跟整体页">
+<meta property="og:image" content="http://i.imgur.com/lcJeQbI.png">
+<meta property="og:updated_time" content="2016-07-30T08:19:31.421Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="优先级">
-<meta name="twitter:description" content="如何计算优先级？  优先级是根据由每种选择器类型构成的级联字串计算而成的。他是一个对应匹配表达式的权重。  若优先级相同，靠后的css会应用到元素上。
-优先级顺序下面试一份优先级逐级增加的选择器列表
-通用选择器（*）
-元素(类型)选择器
-类选择器
-属性选择器
-伪类
-ID 选择器
-内联样式!important 规则除外 当 !important 规则被应用在一个样式声明中时,该样式声明会覆盖CSS中">
+<meta name="twitter:title" content="bootstrap学习(1)--变量">
+<meta name="twitter:description" content="变量写在哪里变量统一全部写在一个文件中，方便查询、修改。
+变量分类
+colors类里，定义最基础的两大类颜色，一种是没有交互效果时的默认状态color,但有不同级别的灰度。另一种是有交互效果的，如success,info,warining,danger。
+Scaffolding  设置一些全局样式，如背景颜色，text-color，link-color,link-hover-color。（跟整体页">
+<meta name="twitter:image" content="http://i.imgur.com/lcJeQbI.png">
   
   
     <link rel="icon" href="/img/favicon.png">
@@ -194,11 +181,11 @@ ID 选择器
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-优先级" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-bootstrap学习-1-less变量" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/04/05/优先级/" class="article-date">
-  	<time datetime="2016-04-05T12:43:32.000Z" itemprop="datePublished">2016-04-05</time>
+      <a href="/2016/07/30/bootstrap学习-1-less变量/" class="article-date">
+  	<time datetime="2016-07-30T07:20:48.000Z" itemprop="datePublished">2016-07-30</time>
 </a>
     </div>
   
@@ -211,7 +198,7 @@ ID 选择器
         
   
     <h1 class="article-title" itemprop="name">
-      优先级
+      bootstrap学习(1)--变量
     </h1>
   
 
@@ -227,18 +214,15 @@ ID 选择器
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="如何计算优先级？"><a href="#如何计算优先级？" class="headerlink" title="如何计算优先级？"></a>如何计算优先级？</h1><p>  优先级是根据由每种选择器类型构成的级联字串计算而成的。他是一个对应匹配表达式的权重。<br>  若优先级相同，靠后的css会应用到元素上。</p>
-<h1 id="优先级顺序"><a href="#优先级顺序" class="headerlink" title="优先级顺序"></a>优先级顺序</h1><h2 id="下面试一份优先级逐级增加的选择器列表"><a href="#下面试一份优先级逐级增加的选择器列表" class="headerlink" title="下面试一份优先级逐级增加的选择器列表"></a>下面试一份优先级逐级增加的选择器列表</h2><ul>
-<li>通用选择器（*）</li>
-<li>元素(类型)选择器</li>
-<li>类选择器</li>
-<li>属性选择器</li>
-<li>伪类</li>
-<li>ID 选择器</li>
-<li>内联样式<h2 id="important-规则除外"><a href="#important-规则除外" class="headerlink" title="!important 规则除外"></a>!important 规则除外</h2> 当 !important 规则被应用在一个样式声明中时,该样式声明会覆盖CSS中任何其他的声明, 无论它处在声明列表中的哪里. 尽管如此, !important规则还是与优先级毫无关系.使用 !important 不是一个好习惯，因为它改变了你样式表本来的级联规则，从而使其难以调试。</li>
-</ul>
-<p>详情请戳<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Specificity#如何计算优先级？" target="_blank" rel="external">https://developer.mozilla.org/zh-CN/docs/Web/CSS/Specificity#如何计算优先级？</a></p>
-<p>具体计算细节请看选择器的特性<a href="https://www.w3.org/TR/selectors/#specificity" target="_blank" rel="external">https://www.w3.org/TR/selectors/#specificity</a></p>
+        <h1 id="变量写在哪里"><a href="#变量写在哪里" class="headerlink" title="变量写在哪里"></a>变量写在哪里</h1><p>变量统一全部写在一个文件中，方便查询、修改。</p>
+<h1 id="变量分类"><a href="#变量分类" class="headerlink" title="变量分类"></a>变量分类</h1><ol>
+<li>colors类里，定义最基础的两大类颜色，一种是没有交互效果时的默认状态color,但有不同级别的灰度。另一种是有交互效果的，如success,info,warining,danger。</li>
+<li>Scaffolding  设置一些全局样式，如背景颜色，text-color，link-color,link-hover-color。（跟整体页面风格相关）</li>
+<li>Typography（排版印刷），小女子认为就是跟字体显示相关的内容。font,line-height,color,body text, headings 等。  在设置字体的时候，有font-size-base：（14px）基础字体大小，和大中小字体，<strong>line-height是个与字体仅仅相关的属性，所以让line-height以font-size-base为基础，将line-height设置为默认是它1.428倍,可以让字体显示时有一定的上下距离</strong>，看起来更加舒服。<strong>相关知识补充</strong>字体系列:serif(衬线体）,sans-serif（无衬线字体）,衬线体 就是字画结束后 会有多余的点缀，且字画的粗细不同，非衬线体相反。还有其他三种通用系列。详情点击 通用字体系列<a href="http://www.w3school.com.cn/css/css_font-family.asp" title="css字体系列" target="_blank" rel="external">css字体系列</a>。</li>
+</ol>
+<ol>
+<li>最后按组件分类，在组件中也尽量使用上面的基础样式变量。例如常用的导航条，它的变量写法<img src="http://i.imgur.com/lcJeQbI.png" alt=""><br> 能调用基础的变量 就调用，如<code>@navbar-default-link-active-bg:            darken(@navbar-default-bg, 6.5%);</code>有自己不一样的样式才单独写。因为不是大众基础，所以没必要设为最通用的变量。</li>
+</ol>
 
       
     </div>
@@ -248,18 +232,9 @@ ID 选择器
     
 <nav id="article-nav">
   
-    <a href="/2016/05/07/参加360前端星计划总结（一）-前端工程师/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          参加360前端星计划总结（一）--前端工程师
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/03/18/判断对象中是否有某个属性的多种方法/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">判断对象中是否有某个属性的多种方法</div>
+    <a href="/2016/06/01/sass入门学习笔记-SassScript/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">sass入门学习笔记-SassScript</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -294,7 +269,7 @@ ID 选择器
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="优先级" data-title="优先级" data-url="http://forjuan.github.io/2016/04/05/优先级/"></div>
+	<div class="ds-thread" data-thread-key="bootstrap学习-1-less变量" data-title="bootstrap学习(1)--变量" data-url="http://forjuan.github.io/2016/07/30/bootstrap学习-1-less变量/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
