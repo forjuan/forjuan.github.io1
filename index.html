@@ -171,6 +171,63 @@
 
       <div class="body-wrap">
   
+    <article id="post-css-learning" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/07/31/css-learning/" class="article-date">
+  	<time datetime="2016-07-31T15:30:39.000Z" itemprop="datePublished">2016-07-31</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/07/31/css-learning/">css-learning</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="position学习"><a href="#position学习" class="headerlink" title="position学习"></a>position学习</h1><ol>
+<li>position 属性值有z-index,left,bottom,top,right,clip.具体内容请戳<a href="http://css.doyoe.com/" title="position" target="_blank" rel="external">http://css.doyoe.com/</a></li>
+<li>定位和布局有关的属性之间的关系<br> 1.display为none时，position,float属性定义将不生效。那visibility :hidden呢？由于为其保留了物理空间，是生效的。<br> 当用visibility和display隐藏对象时，除了是否为对象保留物理空间的区别外，要注意 visibility有继承。如果要可见，则父元素也要是可见的。<br> 2.绝对定位时 float不生效。<br> 3.表格的table-layout属性设置为fixed,则td对象有默认overflow：hidden.</li>
+</ol>
+<p>今天就记录这么多</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-bootstrap学习-1-less变量" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -197,7 +254,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="变量写在哪里"><a href="#变量写在哪里" class="headerlink" title="变量写在哪里"></a>变量写在哪里</h1><p>变量统一全部写在一个文件中，方便查询、修改。</p>
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>学习less中，以bootstrap来学习。</p>
+<h1 id="变量写在哪里"><a href="#变量写在哪里" class="headerlink" title="变量写在哪里"></a>变量写在哪里</h1><p>变量统一全部写在一个文件中，方便查询、修改。</p>
 <h1 id="变量分类"><a href="#变量分类" class="headerlink" title="变量分类"></a>变量分类</h1><ol>
 <li>colors类里，定义最基础的两大类颜色，一种是没有交互效果时的默认状态color,但有不同级别的灰度。另一种是有交互效果的，如success,info,warining,danger。</li>
 <li>Scaffolding  设置一些全局样式，如背景颜色，text-color，link-color,link-hover-color。（跟整体页面风格相关）</li>

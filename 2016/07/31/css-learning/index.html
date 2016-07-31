@@ -4,32 +4,24 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>bootstrap学习(1)--变量 | forjuan</title>
+  <title>css-learning | forjuan</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前言学习less中，以bootstrap来学习。
-变量写在哪里变量统一全部写在一个文件中，方便查询、修改。
-变量分类
-colors类里，定义最基础的两大类颜色，一种是没有交互效果时的默认状态color,但有不同级别的灰度。另一种是有交互效果的，如success,info,warining,danger。
-Scaffolding  设置一些全局样式，如背景颜色，text-color，link-col">
+  <meta name="description" content="position学习
+position 属性值有z-index,left,bottom,top,right,clip.具体内容请戳http://css.doyoe.com/
+定位和布局有关的属性之间的关系 1.display为none时，position,float属性定义将不生效。那visibility :hidden呢？由于为其保留了物理空间，是生效的。 当用visibility和displa">
 <meta property="og:type" content="article">
-<meta property="og:title" content="bootstrap学习(1)--变量">
-<meta property="og:url" content="http://forjuan.github.io/2016/07/30/bootstrap学习-1-less变量/index.html">
+<meta property="og:title" content="css-learning">
+<meta property="og:url" content="http://forjuan.github.io/2016/07/31/css-learning/index.html">
 <meta property="og:site_name" content="forjuan">
-<meta property="og:description" content="前言学习less中，以bootstrap来学习。
-变量写在哪里变量统一全部写在一个文件中，方便查询、修改。
-变量分类
-colors类里，定义最基础的两大类颜色，一种是没有交互效果时的默认状态color,但有不同级别的灰度。另一种是有交互效果的，如success,info,warining,danger。
-Scaffolding  设置一些全局样式，如背景颜色，text-color，link-col">
-<meta property="og:image" content="http://i.imgur.com/lcJeQbI.png">
-<meta property="og:updated_time" content="2016-07-31T15:32:38.164Z">
+<meta property="og:description" content="position学习
+position 属性值有z-index,left,bottom,top,right,clip.具体内容请戳http://css.doyoe.com/
+定位和布局有关的属性之间的关系 1.display为none时，position,float属性定义将不生效。那visibility :hidden呢？由于为其保留了物理空间，是生效的。 当用visibility和displa">
+<meta property="og:updated_time" content="2016-07-31T15:54:14.860Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="bootstrap学习(1)--变量">
-<meta name="twitter:description" content="前言学习less中，以bootstrap来学习。
-变量写在哪里变量统一全部写在一个文件中，方便查询、修改。
-变量分类
-colors类里，定义最基础的两大类颜色，一种是没有交互效果时的默认状态color,但有不同级别的灰度。另一种是有交互效果的，如success,info,warining,danger。
-Scaffolding  设置一些全局样式，如背景颜色，text-color，link-col">
-<meta name="twitter:image" content="http://i.imgur.com/lcJeQbI.png">
+<meta name="twitter:title" content="css-learning">
+<meta name="twitter:description" content="position学习
+position 属性值有z-index,left,bottom,top,right,clip.具体内容请戳http://css.doyoe.com/
+定位和布局有关的属性之间的关系 1.display为none时，position,float属性定义将不生效。那visibility :hidden呢？由于为其保留了物理空间，是生效的。 当用visibility和displa">
   
   
     <link rel="icon" href="/img/favicon.png">
@@ -184,11 +176,11 @@ Scaffolding  设置一些全局样式，如背景颜色，text-color，link-col"
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-bootstrap学习-1-less变量" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-css-learning" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/07/30/bootstrap学习-1-less变量/" class="article-date">
-  	<time datetime="2016-07-30T07:20:48.000Z" itemprop="datePublished">2016-07-30</time>
+      <a href="/2016/07/31/css-learning/" class="article-date">
+  	<time datetime="2016-07-31T15:30:39.000Z" itemprop="datePublished">2016-07-31</time>
 </a>
     </div>
   
@@ -201,7 +193,7 @@ Scaffolding  设置一些全局样式，如背景颜色，text-color，link-col"
         
   
     <h1 class="article-title" itemprop="name">
-      bootstrap学习(1)--变量
+      css-learning
     </h1>
   
 
@@ -217,16 +209,11 @@ Scaffolding  设置一些全局样式，如背景颜色，text-color，link-col"
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>学习less中，以bootstrap来学习。</p>
-<h1 id="变量写在哪里"><a href="#变量写在哪里" class="headerlink" title="变量写在哪里"></a>变量写在哪里</h1><p>变量统一全部写在一个文件中，方便查询、修改。</p>
-<h1 id="变量分类"><a href="#变量分类" class="headerlink" title="变量分类"></a>变量分类</h1><ol>
-<li>colors类里，定义最基础的两大类颜色，一种是没有交互效果时的默认状态color,但有不同级别的灰度。另一种是有交互效果的，如success,info,warining,danger。</li>
-<li>Scaffolding  设置一些全局样式，如背景颜色，text-color，link-color,link-hover-color。（跟整体页面风格相关）</li>
-<li>Typography（排版印刷），小女子认为就是跟字体显示相关的内容。font,line-height,color,body text, headings 等。  在设置字体的时候，有font-size-base：（14px）基础字体大小，和大中小字体，<strong>line-height是个与字体仅仅相关的属性，所以让line-height以font-size-base为基础，将line-height设置为默认是它1.428倍,可以让字体显示时有一定的上下距离</strong>，看起来更加舒服。<strong>相关知识补充</strong>字体系列:serif(衬线体）,sans-serif（无衬线字体）,衬线体 就是字画结束后 会有多余的点缀，且字画的粗细不同，非衬线体相反。还有其他三种通用系列。详情点击 通用字体系列<a href="http://www.w3school.com.cn/css/css_font-family.asp" title="css字体系列" target="_blank" rel="external">css字体系列</a>。</li>
+        <h1 id="position学习"><a href="#position学习" class="headerlink" title="position学习"></a>position学习</h1><ol>
+<li>position 属性值有z-index,left,bottom,top,right,clip.具体内容请戳<a href="http://css.doyoe.com/" title="position" target="_blank" rel="external">http://css.doyoe.com/</a></li>
+<li>定位和布局有关的属性之间的关系<br> 1.display为none时，position,float属性定义将不生效。那visibility :hidden呢？由于为其保留了物理空间，是生效的。<br> 当用visibility和display隐藏对象时，除了是否为对象保留物理空间的区别外，要注意 visibility有继承。如果要可见，则父元素也要是可见的。<br> 2.绝对定位时 float不生效。<br> 3.表格的table-layout属性设置为fixed,则td对象有默认overflow：hidden.</li>
 </ol>
-<ol>
-<li>最后按组件分类，在组件中也尽量使用上面的基础样式变量。例如常用的导航条，它的变量写法<img src="http://i.imgur.com/lcJeQbI.png" alt=""><br> 能调用基础的变量 就调用，如<code>@navbar-default-link-active-bg:            darken(@navbar-default-bg, 6.5%);</code>有自己不一样的样式才单独写。因为不是大众基础，所以没必要设为最通用的变量。</li>
-</ol>
+<p>今天就记录这么多</p>
 
       
     </div>
@@ -236,18 +223,9 @@ Scaffolding  设置一些全局样式，如背景颜色，text-color，link-col"
     
 <nav id="article-nav">
   
-    <a href="/2016/07/31/css-learning/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          css-learning
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/06/01/sass入门学习笔记-SassScript/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">sass入门学习笔记-SassScript</div>
+    <a href="/2016/07/30/bootstrap学习-1-less变量/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">bootstrap学习(1)--变量</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -282,7 +260,7 @@ Scaffolding  设置一些全局样式，如背景颜色，text-color，link-col"
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="bootstrap学习-1-less变量" data-title="bootstrap学习(1)--变量" data-url="http://forjuan.github.io/2016/07/30/bootstrap学习-1-less变量/"></div>
+	<div class="ds-thread" data-thread-key="css-learning" data-title="css-learning" data-url="http://forjuan.github.io/2016/07/31/css-learning/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
