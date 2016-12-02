@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives: 2016/4 | Hexo</title>
+  <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/2016/04/index.html">
+<meta property="og:url" content="http://yoursite.com/page/2/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description">
 <meta name="twitter:card" content="summary">
@@ -64,38 +64,52 @@
       <div class="outer">
         <section id="main">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2016/04/05/优先级/" class="archive-article-date">
-  <time datetime="2016-04-05T12:43:32.000Z" itemprop="datePublished">Apr 5</time>
+    <article id="post-nodeJs搭建简单服务器" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/03/15/nodeJs搭建简单服务器/" class="article-date">
+  <time datetime="2016-03-15T01:01:10.000Z" itemprop="datePublished">2016-03-15</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
     <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/04/05/优先级/">优先级</a>
+      <a class="article-title" href="/2016/03/15/nodeJs搭建简单服务器/">nodeJs搭建简单服务器</a>
     </h1>
   
 
-    </header>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="实现简单的例子：hello-word"><a href="#实现简单的例子：hello-word" class="headerlink" title="实现简单的例子：hello word"></a>实现简单的例子：hello word</h2><h3 id="Create-a-new-server"><a href="#Create-a-new-server" class="headerlink" title="Create a new server"></a>Create a new server</h3><blockquote>
+<p>创建一个文件server.js </p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"> var http  = require(<span class="string">"http"</span>);</span><br><span class="line"></span><br><span class="line">http.createServer(<span class="keyword">function</span>(request,response)&#123;</span><br><span class="line"></span><br><span class="line">  response.writeHead(200,&#123;<span class="string">"Content-Type"</span>:<span class="string">"text/plain"</span>&#125;);</span><br><span class="line"></span><br><span class="line">  response.write(<span class="string">"Hello World"</span>);</span><br><span class="line"></span><br><span class="line">  response.end();</span><br><span class="line"></span><br><span class="line">&#125;).listen(8888);</span><br></pre></td></tr></table></figure>
+<h3 id="接着打开cmd，进入到文件夹"><a href="#接着打开cmd，进入到文件夹" class="headerlink" title="接着打开cmd，进入到文件夹"></a>接着打开cmd，进入到文件夹</h3><h3 id="执行文件，启动服务器"><a href="#执行文件，启动服务器" class="headerlink" title="执行文件，启动服务器"></a>执行文件，启动服务器</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node server.js</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/03/15/nodeJs搭建简单服务器/" data-id="ciw7t3cbb00024kr8mt9mnn7f" class="article-share-link">Share</a>
+      
+      
+    </footer>
   </div>
+  
 </article>
-  
-  
-    </div></section>
+
+
   
 
+
+  <nav id="page-nav">
+    <a class="extend prev" rel="prev" href="/">&laquo; __('prev')</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
 </section>
         
           <aside id="sidebar">
