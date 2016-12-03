@@ -199,35 +199,35 @@
       
         <p>第一次翻译一篇技术文章，如有错误请指正，<a href="https://css-tricks.com/spoooooky-css-selectors/" target="_blank" rel="external">原文链接</a></p>
 <p>译文从这里开始：</p>
-<p>让我们今年用一些万圣节主题的帖子来打起精神。我会分享一些大家都不常用的css选择器。额，这些css选择器能让你非常激动，也许不会，但它们至少很怪异。</p>
-<p>##the lobotomized owl selector (茫然的猫头鹰选择器）<br>2年前Heydo Pickering 令它为人所知。像这样：</p>
+<p>让我们今年用一些万圣节主题的帖子来打起精神。我会分享一些大家都不常用的css选择器。额，这些css选择器能让你怕到骨子里哟，也许没那么可怕，但它们至少很怪异。</p>
+<p>##茫然的猫头鹰选择器<br>2年前Heydo Pickering 令它为人所知。它像这样：</p>
 <pre><code>* + * {
   margin-top: 1.5em;
 }
-</code></pre><p>迟钝的猫头鹰？懂了吗？！</p>
+</code></pre><p>有图有真相，迟钝的猫头鹰？懂了吗？！</p>
 <p><img src="http://p0.qhmsg.com/t017831364caa05255d.jpg" alt=""><br>摘自Ping Zhu的插图</p>
-<p>只选择前面有兄弟元素的元素拥有上边距，就可以不用做下面的事了</p>
+<p>实现的效果是只选择前面有前一个兄弟元素的元素设置margin-top值，就没必要做下面的事了</p>
 <pre><code>.the-last-one-so-don&apos;t-put-margin-on-me{
     margin-bottom: 0;
 }
-</code></pre><p>相反，你甚至可以自由地设置空白间距。</p>
+</code></pre><p>并且，你甚至可以自由地设置空白间距。</p>
 <p>详情请看Chris Coyier(@chriscoyier)在CodePen上的笔记<a href="http://codepen.io/chriscoyier/pen/GjLAJB/" title="Lobotomized Owl" target="_blank" rel="external">Lobotomized Owl</a></p>
 <p><a href="http://codepen.io/search/pens?q=Lobotomized+Owl+&amp;limit=all&amp;type=type-pens" target="_blank" rel="external">看看其他人怎么玩儿的</a></p>
-<h2 id="鬼先生选择器"><a href="#鬼先生选择器" class="headerlink" title="鬼先生选择器"></a>鬼先生选择器</h2><p>这个小家伙非常奇怪，连我的WordPress site 都不会保存他们，所以就写了一个Pen(嵌入看起来也很怪，尝试关注CodePen本身)</p>
-<p>看Chris Coyier(<a href="http://codepen.io/chriscoyier/" target="_blank" rel="external">@chriscoyier</a>)写的<a href="http://codepen.io/chriscoyier/pen/ALzOqp" target="_blank" rel="external">鬼先生选择器</a>Pen</p>
-<p>说到不寻常的字符，记住表情符号也可以！</p>
-<pre><code>&lt;div class=&quot;&amp;#x1f47b;&quot;&gt;
+<h2 id="幽灵选择器"><a href="#幽灵选择器" class="headerlink" title="幽灵选择器"></a>幽灵选择器</h2><p>这个小家伙非常奇怪，连我的WordPress site 都不会保存他们，所以就在CodePen上写了一个Pen。请看下面链接</p>
+<p>看Chris Coyier(<a href="http://codepen.io/chriscoyier/" target="_blank" rel="external">@chriscoyier</a>)写的<a href="http://codepen.io/chriscoyier/pen/ALzOqp" target="_blank" rel="external">幽灵选择器</a>Pen</p>
+<p>说到不寻常的字符，记住还有表情（emoji)符号哟！</p>
+<pre><code>&lt;div class=&quot;👻&quot;&gt;
   Mrs. Ghost
 &lt;/div&gt;
 
-.&amp;#x1f47b; {
+.👻 {
 
  }
-</code></pre><h2 id="怪兽选择器"><a href="#怪兽选择器" class="headerlink" title="怪兽选择器"></a>怪兽选择器</h2><p>说到不寻常的字符，这些<a href="http://dongerlist.com/category" target="_blank" rel="external">dongers</a>算吗？<br><img src="http://p0.qhimg.com/t01937b5471021da2b2.png" alt=""></p>
-<p>这些同样也是选择器！但在这种情况下，有些字符需要在CSS中转义。从怪兽岛逃脱，或者其他，幸运地是Mathias Bynens<a href="https://mothereff.in/css-escapes" target="_blank" rel="external">为此写了个工具</a><br><img src="http://p0.qhimg.com/t01768743ec5138a36a.png" alt=""></p>
-<p>意味着我们可以这样做：</p>
+</code></pre><h2 id="怪兽选择器"><a href="#怪兽选择器" class="headerlink" title="怪兽选择器"></a>怪兽选择器</h2><p>说到不寻常的字符，再来看看<a href="http://dongerlist.com/category" target="_blank" rel="external">dongers（颜文字）</a>？<br><img src="http://p0.qhimg.com/t01937b5471021da2b2.png" alt=""></p>
+<p>这些同样也是选择器！但在这种情况下，有些字符需要使用工具或其他方式在CSS中转义。幸运地是Mathias Bynens<a href="https://mothereff.in/css-escapes" target="_blank" rel="external">为此写了个工具</a><br><img src="http://p0.qhimg.com/t01768743ec5138a36a.png" alt=""></p>
+<p>这意味着我们可以这样做：</p>
 <p>看Chris Coyier(<a href="http://codepen.io/chriscoyier/" target="_blank" rel="external">@chriscoyier</a>)在<a href="https://codepen.io" target="_blank" rel="external">CodePen</a>上写的Pen <a href="http://codepen.io/chriscoyier/pen/jrRBqB/" target="_blank" rel="external">jrRBqB</a> 。</p>
-<p>或者一些FANGs:</p>
+<p>再来看看毒牙:</p>
 <pre><code>&lt;div ^^=^^&gt;
      OoooOOOO FANGS
 &lt;/div&gt;
@@ -235,11 +235,11 @@
 <pre><code>.[\^\^^=\^\^] {
 
 }
-</code></pre><h2 id="另一个Lobotomy-Selector"><a href="#另一个Lobotomy-Selector" class="headerlink" title="另一个Lobotomy Selector"></a>另一个Lobotomy Selector</h2><p>像这样的选择器呢：</p>
+</code></pre><h2 id="另一个茫然的选择器"><a href="#另一个茫然的选择器" class="headerlink" title="另一个茫然的选择器"></a>另一个茫然的选择器</h2><p>像这样的选择器呢：</p>
 <pre><code>the-brain:empty {
    color: green;
 }
-</code></pre><p>什么选择器才是大脑？是我们通过MAD科学如FRANKENSTEIN’S MONSTER?又或是创建一个<a href="https://css-tricks.com/modular-future-web-components/" target="_blank" rel="external">自定义元素</a>或是其他的</p>
+</code></pre><p>什么选择器才是大脑？是我们通过疯狂的科学创建一个像弗兰肯斯坦的怪物选择器?又或是创建一个<a href="https://css-tricks.com/modular-future-web-components/" target="_blank" rel="external">自定义元素</a>还是其他什么元素</p>
 <pre><code>&lt;template&gt;
   The brain!
 &lt;/template&gt;
@@ -256,23 +256,23 @@ brainProto.createdCallback = function() {
 var brain = document.registerElement(&apos;the-brain&apos;, {
   prototype: brainProto
 });
-</code></pre><p>（也许该用最近出的<a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components/Custom_Elements" target="_blank" rel="external">customElements.define()</a>？我也不知道）</p>
-<p>如果我们按上面的这样<a href="http://codepen.io/chriscoyier/pen/gwymzA" target="_blank" rel="external">做</a>就能匹配最初的选择器<br>    <the-brain></the-brain><br>但是选择器表明，如果我们(的HTML)像下面这样就不能匹配：</p>
+</code></pre><p>（也许该用最近出的<a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components/Custom_Elements" target="_blank" rel="external">customElements.define()</a>？但我不知道它）</p>
+<p>如果我们按上面的这样<a href="http://codepen.io/chriscoyier/pen/gwymzA" target="_blank" rel="external">做</a>就能匹配最初的选择器<br>    <the-brain></the-brain><br>但是正如选择器所示，如果我们像下面这样写就不能被匹配到:</p>
 <pre><code>&lt;the-brain&gt;
   Fallback content inside
 &lt;/the-brain&gt;
-</code></pre><p>甚至这样也不匹配（译者注：标签中间有空格）</p>
+</code></pre><p>甚至这样也匹配不到（译者注：标签中间有空格）</p>
 <pre><code>&lt;the-brain&gt; &lt;/the-brain&gt;
 </code></pre><p>但是我们可以用the-brain:blank{}，但:blank还不被支持。</p>
 <h1 id="麻木不仁的选择器"><a href="#麻木不仁的选择器" class="headerlink" title="麻木不仁的选择器"></a>麻木不仁的选择器</h1><p>有什么比麻木不仁更恐怖？它比大部分都恐怖，这是一个至今真正奇怪的选择器，对吧？</p>
 <pre><code>a[href$=&quot;.zip&quot; i] {
 
 }
-</code></pre><p>最后的i是在说明属性值”.zip”可以匹配大小写字符。</p>
+</code></pre><p>末尾的i是在说明属性值”.zip”可以匹配大小写字符。</p>
 <p>这源于Wes Bos:</p>
 <p>🔥 CSS4 is getting case insensitive matching on attribute selectors!<br> <em><a href="https://t.co/7LQBi2VUcL" target="_blank" rel="external"><br>pic.twitter.com/7LQBi2VUcL</a></em></p>
 <p>— Wes Bos (@wesbos) <em><a href="https://twitter.com/wesbos/status/672139536680398848" target="_blank" rel="external">December 2, 2015</a></em></p>
-<h1 id="唯一正气凌然的选择器"><a href="#唯一正气凌然的选择器" class="headerlink" title="唯一正气凌然的选择器"></a>唯一正气凌然的选择器</h1><p>斑马的条纹很容易实现吗？</p>
+<h1 id="唯一正气凌然的选择器"><a href="#唯一正气凌然的选择器" class="headerlink" title="唯一正气凌然的选择器"></a>唯一正气凌然的选择器</h1><p>实现 <del>僵尸</del> 斑马的条纹很容易吗？</p>
 <pre><code>tr:nth-child(odd) {
      background: WhiteSmoke;
 }
@@ -293,7 +293,7 @@ var brain = document.registerElement(&apos;the-brain&apos;, {
 }
 </code></pre><p>“奇数”是仍然还会显示的行计算出来的，斑马条纹也会保留完整。</p>
 <p>虽然还不能完全支持，那就让让我们像女妖一样尖叫到它被支持为止。</p>
-<p>##刀穿过内脏选择器</p>
+<p>##穿肠而过的匕首选择器</p>
 <p>还记得我们创建的自定义元素吗？我觉得更像是元素模板，而其中有些实际的HTML。</p>
 <pre><code>&lt;template&gt;
   &lt;div class=&quot;braaaain&quot;&gt;The brain!&lt;/div&gt;
@@ -307,16 +307,16 @@ the-brain {
 .braaaain {
   color: red;
 }
-</code></pre><p>因为封装了，它是web组件的点，但你可以用把刀穿过幽灵般的DOM树，像这样：</p>
+</code></pre><p>因为封装了，它是web组件的关键点，但你可以用把匕首穿过幽灵般的 SHADOW DOM，像这样：</p>
 <pre><code>html /deep/ .braaaain {
   color: red;
 }
-</code></pre><p>这虽然只能作用在Blink，如果这是标准那我也没办法。啊，跨浏览器兼容性太可怕了。</p>
+</code></pre><p>这虽然只有Blink支持，如果这是标准那我也没办法。啊，跨浏览器兼容性太可怕了。</p>
 <p>#ID选择器</p>
 <pre><code>#container {
 
 }
-</code></pre><p>太明确了，#lol</p>
+</code></pre><p>这就太明确了，哈哈</p>
 
       
     </div>
